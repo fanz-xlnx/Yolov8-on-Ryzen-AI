@@ -47,12 +47,21 @@ In this Deep Learning(DL) tutorial, you will see how to deploy the Yolov8 detect
 - Visual Studio 2019 (with Desktop dev c++ & MSVC v142-vs2019 x64/x86 Spectre-mitigated libs)
 - Anaconda or Miniconda
 - Git
+- openCV (version = 4.6.0)
+- glog
+- gflags
 - cmake (version >= 3.26)
 - python (version >= 3.9) (Recommended for python 3.9.13 64bit)
 - IPU driver & IPU xclbin release >= 20230726
 - voe package >= (jenkins-nightly-build-id==205)
 
 ## 3 Installation
+
+### Visual Studio 2019
+
+The [Visual Studio](https://my.visualstudio.com/Downloads?q=visual%20studio%202019&wt.mc_id=o~msft~vscom~older-downloads) is required to compile the related source code.
+
+:exclamation: The Yolov8 demo in this tutorial may not be compatible with other Visual Studio version.
 
 ### IPU Driver
 
@@ -103,3 +112,6 @@ python installer.py
 pip install voe-0.1.0-cp39-cp39-win_amd64.whl
 pip install onnxruntime_vitisai-1.15.1-cp39-cp39-win_amd64.whl
 ```
+#### OpenCV
+
+It is recommended to build OpenCV form source code and use static build. [Git](https://git-scm.com/download/win) is required to clone the repository.
