@@ -79,22 +79,22 @@ Ensure that the IPU driver is installed from `Device Manager` -> `System Devices
 
 The Ryzen AI Software Platform requires using a [Conda](https://docs.anaconda.com/free/anaconda/install/windows/) environment for the installation process.
 
-Start a conda prompt. In the conda prompt, create and activate an environment for the rest of the installation process. We will use ***ryzen_test*** here as an example.
+Start a `Conda Prompt`. In the Conda Prompt, create and activate an environment for the rest of the installation process. We will use ***ryzen_test*** here as an example.
 
-```Bash
+```Conda Prompt
 conda create --name ryzen_test python=3.9
 conda activate ryzen_test
 ```
 
 #### ONNX Runtime
 
-```Bash
+```Conda Prompt
 pip install onnxruntime
 ```
 
 #### Cmake
 
-```Bash
+```Conda Prompt
 pip install cmake
 ```
 
@@ -106,7 +106,7 @@ Download the Execution Provider setup package with the link below:
 
 Change the directory to the extracted Execution Provider setup package directory and install the necessary packages:
 
-```Bash
+```Conda Prompt
 cd voe-3.5-win_amd64\voe-3.5-win_amd64
 python installer.py
 pip install voe-0.1.0-cp39-cp39-win_amd64.whl
@@ -115,3 +115,17 @@ pip install onnxruntime_vitisai-1.15.1-cp39-cp39-win_amd64.whl
 #### OpenCV
 
 It is recommended to build OpenCV form source code and use static build. [Git](https://git-scm.com/download/win) is required to clone the repository.
+
+Start a `Git Bash`. In the Git Bash, clone the repository
+
+```Git Bash
+git clone https://github.com/opencv/opencv.git -b 4.6.0
+```
+
+Switch back to the `Conda Prompt`, and compile the OpenCV source code with cmake.
+
+```Conda Prompt
+cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\opencv' '-DCMAKE_PREFIX_PATH=.\opencv' -DCMAKE_BUILD_TYPE=Release -DBUILD_opencv_python2=OFF -DBUILD_opencv_python3=OFF -DBUILD_WITH_STATIC_CRT=OFF -B build -S opencv
+cmake --build build --config Release
+cmake --install build --config Release
+```
