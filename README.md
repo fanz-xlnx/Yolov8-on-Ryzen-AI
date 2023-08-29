@@ -21,13 +21,9 @@
 
 [3 Installation](#3-installation)
 
-[4 The Main Flow on the Host](#4-the-main-flow-on-the-host)
+[4 Run Yolov8 Demo](#4-run-yolov8-demo)
 
-[5 Multithreading Application Code](#5-multithreading-application-code)
-
-[6 Run on the Target Board](#6-run-on-the-target-board)
-
-[7 Summary](#7-summary)
+[5 Summary](#5-summary)
 
 [Appendix](#appendix)
 
@@ -168,4 +164,14 @@ cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_POSIT
 cmake --build build --config Release
 cmake --install build --config Release
 cd ../..
+```
+
+## 4 Run Yolov8 Demo
+
+### Compilation
+
+move `YOLOv8_RyzenAI_demo` folder to `VOE` folder(same level as **vitis_ai_ep_cxx_sample**)
+
+```Conda Prompt
+build.bat
 ```
