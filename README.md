@@ -56,3 +56,50 @@ In this Deep Learning(DL) tutorial, you will see how to deploy the Yolov8 detect
 
 ### IPU Driver
 
+Please download the Adrenalin IPU driver from the Link below and install it on your laptop.
+
+[Adrenalin IPU Driver](https://amdcloud-my.sharepoint.com/:u:/g/personal/anluo_amd_com/EaZ7iksQO2xKs7efI-zZ8BgBZo0wwEyQo91v8xa3br3wNw?e=gA2jTF)
+
+Ensure that the IPU driver is installed from `Device Manager` -> `System Devices` -> `AMD IPU Device` as shown in the following image. The version is expected to be 10.106.6.52
+
+<p align="left">
+<img src="images/image1.png">
+</p>
+
+### Denpendencies
+
+The Ryzen AI Software Platform requires using a [Conda](https://docs.anaconda.com/free/anaconda/install/windows/) environment for the installation process.
+
+Start a conda prompt. In the conda prompt, create and activate an environment for the rest of the installation process. We will use ***ryzen_test*** here as an example.
+
+```Bash
+conda create --name ryzen_test python=3.9
+conda activate ryzen_test
+```
+
+#### ONNX Runtime
+
+```Bash
+pip install onnxruntime
+```
+
+#### Cmake
+
+```Bash
+pip install cmake
+```
+
+#### Vitis AI ONNX Runtime Execution Provider
+
+Download the Execution Provider setup package with the link below:
+
+[Vitis AI ONNX Runtime EP](https://account.amd.com/en/forms/downloads/ryzen-ai-software-platform-xef.html?filename=voe-3.5-win_amd64.zip)
+
+Change the directory to the extracted Execution Provider setup package directory and install the necessary packages:
+
+```Bash
+cd voe-3.5-win_amd64\voe-3.5-win_amd64
+python installer.py
+pip install voe-0.1.0-cp39-cp39-win_amd64.whl
+pip install onnxruntime_vitisai-1.15.1-cp39-cp39-win_amd64.whl
+```
