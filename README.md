@@ -129,3 +129,43 @@ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_POSITIO
 cmake --build build --config Release
 cmake --install build --config Release
 ```
+
+#### gflags
+
+In the Git Bash, clone the repository
+
+```Git Bash
+git clone https://github.com/gflags/gflags.git
+```
+
+Switch back to the `Conda Prompt`, and compile the gflags source code with cmake.
+
+```Conda Prompt
+cd gflags
+mkdir mybuild
+cd mybuild
+cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\gflag'  -B build -S ../
+cmake --build build --config Release
+cmake --install build --config Release
+cd ../..
+```
+
+#### glog
+
+In the Git Bash, clone the repository
+
+```Git Bash
+git clone https://github.com/google/glog.git
+```
+
+Switch back to the `Conda Prompt`, and compile the glog source code with cmake.
+
+```Conda Prompt
+cd glog
+mkdir mybuild
+cd mybuild
+cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\glog'  -B build -S ../
+cmake --build build --config Release
+cmake --install build --config Release
+cd ../..
+```
