@@ -175,3 +175,28 @@ move `YOLOv8_RyzenAI_demo` folder to `VOE` folder(same level as **vitis_ai_ep_cx
 ```Conda Prompt
 build.bat
 ```
+
+The output will be generated as below.
+
+```
+......
+    -- Installing: C:/Users/ibane/Desktop/voe-win_amd64-with_xcompiler_on-c07e419-latest/bin/camera_yolov8.exe
+    -- Installing: C:/Users/ibane/Desktop/voe-win_amd64-with_xcompiler_on-c07e419-latest/bin/camera_yolov8_nx1x4.exe
+    -- Installing: C:/Users/ibane/Desktop/voe-win_amd64-with_xcompiler_on-c07e419-latest/bin/test_jpeg_yolov8.exe
+```
+
+### Run with Image
+
+```
+run_jpeg.bat DetectionModel_int.onnx sample_yolov5.jpg
+```
+
+The output will be generated as below.
+
+```
+result: 0       person  490.38498       85.79535        640.00488       475.18262       0.932453     
+result: 0       person  65.96048        97.76373        320.66068       473.83783       0.924142   
+result: 0       person  182.15485       306.91266       445.14795       475.26132       0.893309   
+result: 27      tie     584.48022       221.15732       632.27008       244.21243       0.851953   
+result: 27      tie     175.62622       224.15210       235.84900       248.83557       0.651355    
+```
