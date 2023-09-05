@@ -187,6 +187,8 @@ The output will be generated as below.
 
 ### Run with Image
 
+To validate your setup, the following command will do the inference with single image.
+
 ```
 run_jpeg.bat DetectionModel_int.onnx sample_yolov5.jpg
 ```
@@ -202,6 +204,11 @@ result: 27      tie     175.62622       224.15210       235.84900       248.8355
 ```
 
 ### Run with Live Camera
+
+To run with live camera, user needs to change the display and camera settings manually as below.
+
+- Go to `Display settings`, change Scale to ***100%*** in the `Scale & layout` section.
+- Go to `Bluetooth & devices` -> `Cameras` -> `USB2.0 FHD UVC WebCam`, turn off the Background effects in the `Windows Studio Effects` section.
 
 ```
 camera_nx.bat
