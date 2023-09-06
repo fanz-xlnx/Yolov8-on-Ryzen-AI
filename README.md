@@ -23,12 +23,7 @@
 
 [4 Run Yolov8 Demo](#4-run-yolov8-demo)
 
-[5 Summary](#5-summary)
-
-[Appendix](#appendix)
-
 [License](#license)
-
 
 
 ## 1 Introduction
@@ -213,3 +208,45 @@ To run with live camera, user needs to change the display and camera settings ma
 ```
 camera_nx.bat
 ```
+
+<p align="left">
+<img src="images/image2.png">
+</p>
+
+Possible options to run the yolov8 demo.
+
+```
+camera_nx.bat -h
+
+Options:
+      -c [parallel runs]: Specifies the (max) number of runs to invoke simultaneously. Default:1.
+      -s [input_stream] set input stream, E.g. set 0 to use default camera.
+      -x [intra_op_num_threads]: Sets the number of threads used to parallelize the execution within nodes, A value of 0 means ORT will pick a default. Must >=0.
+      -y [inter_op_num_threads]: Sets the number of threads used to parallelize the execution of the graph (across nodes), A value of 0 means ORT will pick a default. Must >=0.    
+      -D [Disable thread spinning]: disable spinning entirely for thread owned by onnxruntime intra-op thread pool.
+      -Z [Force thread to stop spinning between runs]: disallow thread from spinning during runs to reduce cpu usage.
+      -T [Set intra op thread affinities]: Specify intra op thread affinity string.
+         [Example]: -T 1,2;3,4;5,6 or -T 1-2;3-4;5-6
+         Use semicolon to separate configuration between threads.
+         E.g. 1,2;3,4;5,6 specifies affinities for three threads, the first thread will be attached to the first and second logical processor.
+      -R [Set camera resolution]: Specify the camera resolution by string.
+         [Example]: -R 1280x720
+         Default:1920x1080.
+      -r [Set Display resolution]: Specify the display resolution by string.
+         [Example]: -r 1280x720
+         Default:1920x1080.
+      -L Print detection log when turning on.
+      -h: help
+```
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2022 Advanced Micro Devices, Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
