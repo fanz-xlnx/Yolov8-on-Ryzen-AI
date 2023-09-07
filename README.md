@@ -292,7 +292,13 @@ cd ../..
 
 ### Compilation
 
-move `YOLOv8_RyzenAI_demo` folder to `VOE` folder(same level as **vitis_ai_ep_cxx_sample**)
+Start a `Git Bash`. In the Git Bash, clone the repository
+
+```Git Bash
+git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git
+```
+
+Switch back to the `Conda Prompt`, and compile the Yolov8 source code.
 
 ```Conda Prompt
 build.bat
