@@ -301,6 +301,7 @@ git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git
 Switch back to the `Conda Prompt`, and compile the Yolov8 source code.
 
 ```Conda Prompt
+cd YOLOv8_RyzenAI_demo
 build.bat
 ```
 
