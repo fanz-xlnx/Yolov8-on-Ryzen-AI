@@ -1,0 +1,10 @@
+^C:\USERS\AMD\DOCUMENTS\WORKSPACE\YOLOV8-APP\YOLOV8_RYZENAI_DEMO\YOLOV8\CMAKELISTS.TXT
+setlocal
+C:\Users\AMD\anaconda3\envs\ryzen_test\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8 -BC:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8/build --check-stamp-file C:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

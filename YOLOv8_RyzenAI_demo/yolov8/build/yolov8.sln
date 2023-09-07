@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{68F3A5F7-255A-319D-8B95-41694685AB08}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A955D107-356B-3CBF-AD13-53EBC65BF50E} = {A955D107-356B-3CBF-AD13-53EBC65BF50E}
+		{E9BB2A0C-6167-3F0E-8736-7C889013AE65} = {E9BB2A0C-6167-3F0E-8736-7C889013AE65}
+		{5F48D550-8D8C-3F62-8167-A1D948320122} = {5F48D550-8D8C-3F62-8167-A1D948320122}
+		{965AE75D-8928-3A88-829D-16F85BE0C241} = {965AE75D-8928-3A88-829D-16F85BE0C241}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj", "{6A5DC2B3-AF86-37F8-931E-722108C10630}"
+	ProjectSection(ProjectDependencies) = postProject
+		{68F3A5F7-255A-319D-8B95-41694685AB08} = {68F3A5F7-255A-319D-8B95-41694685AB08}
+		{A955D107-356B-3CBF-AD13-53EBC65BF50E} = {A955D107-356B-3CBF-AD13-53EBC65BF50E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{A955D107-356B-3CBF-AD13-53EBC65BF50E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "camera_yolov8", "camera_yolov8.vcxproj", "{E9BB2A0C-6167-3F0E-8736-7C889013AE65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A955D107-356B-3CBF-AD13-53EBC65BF50E} = {A955D107-356B-3CBF-AD13-53EBC65BF50E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "camera_yolov8_nx1x4", "camera_yolov8_nx1x4.vcxproj", "{5F48D550-8D8C-3F62-8167-A1D948320122}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A955D107-356B-3CBF-AD13-53EBC65BF50E} = {A955D107-356B-3CBF-AD13-53EBC65BF50E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_jpeg_yolov8", "test_jpeg_yolov8.vcxproj", "{965AE75D-8928-3A88-829D-16F85BE0C241}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A955D107-356B-3CBF-AD13-53EBC65BF50E} = {A955D107-356B-3CBF-AD13-53EBC65BF50E}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68F3A5F7-255A-319D-8B95-41694685AB08}.Release|x64.ActiveCfg = Release|x64
+		{68F3A5F7-255A-319D-8B95-41694685AB08}.Release|x64.Build.0 = Release|x64
+		{6A5DC2B3-AF86-37F8-931E-722108C10630}.Release|x64.ActiveCfg = Release|x64
+		{A955D107-356B-3CBF-AD13-53EBC65BF50E}.Release|x64.ActiveCfg = Release|x64
+		{A955D107-356B-3CBF-AD13-53EBC65BF50E}.Release|x64.Build.0 = Release|x64
+		{E9BB2A0C-6167-3F0E-8736-7C889013AE65}.Release|x64.ActiveCfg = Release|x64
+		{E9BB2A0C-6167-3F0E-8736-7C889013AE65}.Release|x64.Build.0 = Release|x64
+		{5F48D550-8D8C-3F62-8167-A1D948320122}.Release|x64.ActiveCfg = Release|x64
+		{5F48D550-8D8C-3F62-8167-A1D948320122}.Release|x64.Build.0 = Release|x64
+		{965AE75D-8928-3A88-829D-16F85BE0C241}.Release|x64.ActiveCfg = Release|x64
+		{965AE75D-8928-3A88-829D-16F85BE0C241}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAC98201-700D-35A5-B4CD-E2AFD461DC31}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,40 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/gflags/lib/cmake/gflags/gflags-config-version.cmake
+C:/Program Files/gflags/lib/cmake/gflags/gflags-config.cmake
+C:/Program Files/gflags/lib/cmake/gflags/gflags-nonamespace-targets-release.cmake
+C:/Program Files/gflags/lib/cmake/gflags/gflags-nonamespace-targets.cmake
+C:/Program Files/glog/lib/cmake/glog/glog-config-version.cmake
+C:/Program Files/glog/lib/cmake/glog/glog-config.cmake
+C:/Program Files/glog/lib/cmake/glog/glog-modules.cmake
+C:/Program Files/glog/lib/cmake/glog/glog-targets-release.cmake
+C:/Program Files/glog/lib/cmake/glog/glog-targets.cmake
+C:/Users/AMD/Documents/Workspace/opencv/build/OpenCVConfig-version.cmake
+C:/Users/AMD/Documents/Workspace/opencv/build/OpenCVConfig.cmake
+C:/Users/AMD/Documents/Workspace/opencv/build/OpenCVModules.cmake
+C:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8/CMakeLists.txt
+C:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8/build/CMakeFiles/3.27.2/CMakeCCompiler.cmake
+C:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8/build/CMakeFiles/3.27.2/CMakeCXXCompiler.cmake
+C:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8/build/CMakeFiles/3.27.2/CMakeRCCompiler.cmake
+C:/Users/AMD/Documents/Workspace/yolov8-app/YOLOv8_RyzenAI_demo/yolov8/build/CMakeFiles/3.27.2/CMakeSystem.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCInformation.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCXXInformation.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeGenericSystem.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeRCInformation.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/MSVC-C.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/MSVC-CXX.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Compiler/MSVC.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/FindPackageMessage.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Windows-MSVC-C.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Windows-MSVC.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/Windows.cmake
+C:/Users/AMD/anaconda3/envs/ryzen_test/Lib/site-packages/cmake/data/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake
