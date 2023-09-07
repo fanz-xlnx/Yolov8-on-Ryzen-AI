@@ -77,16 +77,110 @@ conda create --name ryzen_test python=3.9
 conda activate ryzen_test
 ```
 
+Output:
+
+```
+## Package Plan ##
+
+  environment location: C:\Users\AMD\anaconda3\envs\yolov8
+
+  added / updated specs:
+    - python=3.9
+
+
+The following NEW packages will be INSTALLED:
+
+  ca-certificates    pkgs/main/win-64::ca-certificates-2023.05.30-haa95532_0
+  openssl            pkgs/main/win-64::openssl-3.0.10-h2bbff1b_2
+  pip                pkgs/main/win-64::pip-23.2.1-py39haa95532_0
+  python             pkgs/main/win-64::python-3.9.17-h1aa4202_0
+  setuptools         pkgs/main/win-64::setuptools-68.0.0-py39haa95532_0
+  sqlite             pkgs/main/win-64::sqlite-3.41.2-h2bbff1b_0
+  tzdata             pkgs/main/noarch::tzdata-2023c-h04d1e81_0
+  vc                 pkgs/main/win-64::vc-14.2-h21ff451_1
+  vs2015_runtime     pkgs/main/win-64::vs2015_runtime-14.27.29016-h5e58377_2
+  wheel              pkgs/main/win-64::wheel-0.38.4-py39haa95532_0
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate yolov8
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+C:\Users\AMD>conda activate yolov8
+
+(yolov8) C:\Users\AMD>
+```
+
 #### ONNX Runtime
 
 ```Conda Prompt
 pip install onnxruntime
 ```
 
+Output:
+
+```
+Collecting onnxruntime
+  Obtaining dependency information for onnxruntime from https://files.pythonhosted.org/packages/6a/fb/99bc0e75f3d23eab0dda640acaf23d0a3a68c3949a56ac5c25698eab4958/onnxruntime-1.15.1-cp39-cp39-win_amd64.whl.metadata
+  Using cached onnxruntime-1.15.1-cp39-cp39-win_amd64.whl.metadata (4.1 kB)
+Collecting coloredlogs (from onnxruntime)
+  Using cached coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Collecting flatbuffers (from onnxruntime)
+  Obtaining dependency information for flatbuffers from https://files.pythonhosted.org/packages/6f/12/d5c79ee252793ffe845d58a913197bfa02ae9a0b5c9bc3dc4b58d477b9e7/flatbuffers-23.5.26-py2.py3-none-any.whl.metadata
+  Using cached flatbuffers-23.5.26-py2.py3-none-any.whl.metadata (850 bytes)
+Collecting numpy>=1.21.6 (from onnxruntime)
+  Obtaining dependency information for numpy>=1.21.6 from https://files.pythonhosted.org/packages/df/18/181fb40f03090c6fbd061bb8b1f4c32453f7c602b0dc7c08b307baca7cd7/numpy-1.25.2-cp39-cp39-win_amd64.whl.metadata
+  Using cached numpy-1.25.2-cp39-cp39-win_amd64.whl.metadata (5.7 kB)
+Collecting packaging (from onnxruntime)
+  Using cached packaging-23.1-py3-none-any.whl (48 kB)
+Collecting protobuf (from onnxruntime)
+  Obtaining dependency information for protobuf from https://files.pythonhosted.org/packages/20/26/343db129c96d93a9d0820319a6beba4497aced1b0cd4b6051b0e4e1fd100/protobuf-4.24.2-cp39-cp39-win_amd64.whl.metadata
+  Using cached protobuf-4.24.2-cp39-cp39-win_amd64.whl.metadata (540 bytes)
+Collecting sympy (from onnxruntime)
+  Using cached sympy-1.12-py3-none-any.whl (5.7 MB)
+Collecting humanfriendly>=9.1 (from coloredlogs->onnxruntime)
+  Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Collecting mpmath>=0.19 (from sympy->onnxruntime)
+  Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Collecting pyreadline3 (from humanfriendly>=9.1->coloredlogs->onnxruntime)
+  Using cached pyreadline3-3.4.1-py3-none-any.whl (95 kB)
+Using cached onnxruntime-1.15.1-cp39-cp39-win_amd64.whl (6.7 MB)
+Using cached numpy-1.25.2-cp39-cp39-win_amd64.whl (15.6 MB)
+Using cached flatbuffers-23.5.26-py2.py3-none-any.whl (26 kB)
+Using cached protobuf-4.24.2-cp39-cp39-win_amd64.whl (430 kB)
+Installing collected packages: pyreadline3, mpmath, flatbuffers, sympy, protobuf, packaging, numpy, humanfriendly, coloredlogs, onnxruntime
+Successfully installed coloredlogs-15.0.1 flatbuffers-23.5.26 humanfriendly-10.0 mpmath-1.3.0 numpy-1.25.2 onnxruntime-1.15.1 packaging-23.1 protobuf-4.24.2 pyreadline3-3.4.1 sympy-1.12
+```
+
 #### Cmake
 
 ```Conda Prompt
 pip install cmake
+```
+
+Output:
+
+```
+Collecting cmake
+  Obtaining dependency information for cmake from https://files.pythonhosted.org/packages/e0/67/3cc8ccb0cebac463033e1f8588328de32f8f85cfd9d3150c05b57b827893/cmake-3.27.4.1-py2.py3-none-win_amd64.whl.metadata
+  Downloading cmake-3.27.4.1-py2.py3-none-win_amd64.whl.metadata (6.8 kB)
+Downloading cmake-3.27.4.1-py2.py3-none-win_amd64.whl (34.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 34.6/34.6 MB 147.5 kB/s eta 0:00:00
+Installing collected packages: cmake
+Successfully installed cmake-3.27.4.1
 ```
 
 #### Vitis AI ONNX Runtime Execution Provider
@@ -103,6 +197,39 @@ python installer.py
 pip install voe-0.1.0-cp39-cp39-win_amd64.whl
 pip install onnxruntime_vitisai-1.15.1-cp39-cp39-win_amd64.whl
 ```
+
+Output:
+
+```
+2023-09-06 00:22:16,344 - INFO - copying C:\Windows\System32\AMD\xrt_core.dll to C:\Users\AMD\anaconda3\envs\yolov8\lib\site-packages\onnxruntime\capi
+2023-09-06 00:22:16,373 - INFO - copying C:\Windows\System32\AMD\xrt_coreutil.dll to C:\Users\AMD\anaconda3\envs\yolov8\lib\site-packages\onnxruntime\capi
+2023-09-06 00:22:16,405 - INFO - copying C:\Windows\System32\AMD\xrt_phxcore.dll to C:\Users\AMD\anaconda3\envs\yolov8\lib\site-packages\onnxruntime\capi
+2023-09-06 00:22:16,428 - INFO - copying C:\Users\AMD\Downloads\IPU_Dependency\voe-3.5-win_amd64\voe-0.1.0-cp39-cp39-win_amd64\onnxruntime.dll to C:\Users\AMD\anaconda3\envs\yolov8\lib\site-packages\onnxruntime\capi
+
+Processing c:\users\amd\downloads\ipu_dependency\voe-3.5-win_amd64\voe-0.1.0-cp39-cp39-win_amd64.whl
+Collecting glog==0.3.1 (from voe==0.1.0)
+  Using cached glog-0.3.1-py2.py3-none-any.whl (7.8 kB)
+Collecting python-gflags>=3.1 (from glog==0.3.1->voe==0.1.0)
+  Using cached python_gflags-3.1.2-py3-none-any.whl
+Collecting six (from glog==0.3.1->voe==0.1.0)
+  Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Installing collected packages: python-gflags, six, glog, voe
+Successfully installed glog-0.3.1 python-gflags-3.1.2 six-1.16.0 voe-0.1.0
+
+Processing c:\users\amd\downloads\ipu_dependency\voe-3.5-win_amd64\onnxruntime_vitisai-1.15.1-cp39-cp39-win_amd64.whl
+Requirement already satisfied: coloredlogs in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from onnxruntime-vitisai==1.15.1) (15.0.1)
+Requirement already satisfied: flatbuffers in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from onnxruntime-vitisai==1.15.1) (23.5.26)
+Requirement already satisfied: numpy>=1.25.1 in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from onnxruntime-vitisai==1.15.1) (1.25.2)
+Requirement already satisfied: packaging in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from onnxruntime-vitisai==1.15.1) (23.1)
+Requirement already satisfied: protobuf in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from onnxruntime-vitisai==1.15.1) (4.24.2)
+Requirement already satisfied: sympy in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from onnxruntime-vitisai==1.15.1) (1.12)
+Requirement already satisfied: humanfriendly>=9.1 in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from coloredlogs->onnxruntime-vitisai==1.15.1) (10.0)
+Requirement already satisfied: mpmath>=0.19 in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from sympy->onnxruntime-vitisai==1.15.1) (1.3.0)
+Requirement already satisfied: pyreadline3 in c:\users\amd\anaconda3\envs\yolov8\lib\site-packages (from humanfriendly>=9.1->coloredlogs->onnxruntime-vitisai==1.15.1) (3.4.1)
+Installing collected packages: onnxruntime-vitisai
+Successfully installed onnxruntime-vitisai-1.15.1
+```
+
 #### OpenCV
 
 It is recommended to build OpenCV form source code and use static build. [Git](https://git-scm.com/download/win) is required to clone the repository.
