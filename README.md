@@ -10,7 +10,7 @@
 
 - Version:      Ryzen AI Software Platform v0.7 
 - Support:      AMD Ryzen 7040U, 7040HS series mobile processors with Windows 11 OS.
-- Last update:  24 Aug. 2023
+- Last update:  7 Sep. 2023
 
 
 ## Table of Contents
