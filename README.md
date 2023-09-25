@@ -327,21 +327,36 @@ Please also update variable "DATA_PATH" in "coco.yaml" to point to the correct l
         + val2017.txt
 ```
 
+### Quantization
+Environment setup
+
 ```Bash
 $ cd <Vitis-AI-Home>
 $ git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git 
 $ ./docker_run.sh xilinx/vitis-ai-pytorch-gpu:<Your-Image-Tag>
 $ cd Yolov8-on-Ryzen-AI
+$ bash env_setup.sh
 ```
 
-### Env Setup
+User could use the ***run_test.sh*** script to validate the float point model first before the quantization.
 
+```Bash
+$ bash run_test.sh
+```
+
+Then Quantize the model with following script.
+
+```Bash
+$ bash run_quant.sh
+```
+
+Copy the quantized model to Ryzen AI laptop for the following deployment.
 
 ## 5 Run Yolov8 Demo
 
 ### Compilation
 
-Start a `Git Bash`. In the Git Bash, clone the repository
+If the ***section 4*** is skiped, please start a `Git Bash`. In the Git Bash, clone the repository
 
 ```Git Bash
 # git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git
