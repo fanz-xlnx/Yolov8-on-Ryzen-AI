@@ -21,7 +21,9 @@
 
 [3 Installation](#3-installation)
 
-[4 Run Yolov8 Demo](#4-run-yolov8-demo)
+[4 Quantization](#4-quantization)
+
+[5 Run Yolov8 Demo](#5-run-yolov8-demo)
 
 [License](#license)
 
@@ -34,7 +36,8 @@ In this Deep Learning(DL) tutorial, you will see how to deploy the Yolov8 detect
 
 ## 2 Prerequisites
 
-- AMD Ryzen AI Laptop with Windows 11 OS.
+- Linux server (GPU is preferred)
+- AMD Ryzen AI Laptop with Windows 11 OS
 - Visual Studio 2019 (with Desktop dev c++ & MSVC v142-vs2019 x64/x86 Spectre-mitigated libs)
 - Anaconda or Miniconda
 - Git
@@ -288,7 +291,15 @@ cmake --install build --config Release
 cd ../..
 ```
 
-## 4 Run Yolov8 Demo
+All the dependencies on the Ryzen AI laptop are installed completely. User could run a end to end Yolov8 deplomyment progress with the following ***Section 4***, which will start from the FP32 Yolov8 model. The whole progress will last for several hours or one day depending on the hardware computing ability. 
+
+Alternatively, user who wants a quick benchmark could skip ***Section 4*** and start from ***Section 5*** with pre-quantized model.
+
+## 4 Quantization
+
+In this section, we will leverage the Vitis AI docker container on Linux GPU server for a quantized awared training(QAT).
+
+## 5 Run Yolov8 Demo
 
 ### Compilation
 
