@@ -76,8 +76,8 @@ The Ryzen AI Software Platform requires using a [Conda](https://docs.anaconda.co
 Start a `Conda Prompt`. In the Conda Prompt, create and activate an environment for the rest of the installation process. We will use ***ryzen_test*** here as an example.
 
 ```Conda Prompt
-conda create --name ryzen_test python=3.9
-conda activate ryzen_test
+# conda create --name ryzen_test python=3.9
+# conda activate ryzen_test
 ```
 
 Output:
@@ -130,7 +130,7 @@ C:\Users\AMD>conda activate yolov8
 #### ONNX Runtime
 
 ```Conda Prompt
-pip install onnxruntime
+# pip install onnxruntime
 ```
 
 Output:
@@ -171,7 +171,7 @@ Successfully installed coloredlogs-15.0.1 flatbuffers-23.5.26 humanfriendly-10.0
 #### Cmake
 
 ```Conda Prompt
-pip install cmake
+# pip install cmake
 ```
 
 Output:
@@ -195,10 +195,10 @@ Download the Execution Provider setup package with the link below:
 Change the directory to the extracted Execution Provider setup package directory and install the necessary packages:
 
 ```Conda Prompt
-cd voe-3.5-win_amd64\voe-3.5-win_amd64
-python installer.py
-pip install voe-0.1.0-cp39-cp39-win_amd64.whl
-pip install onnxruntime_vitisai-1.15.1-cp39-cp39-win_amd64.whl
+# cd voe-3.5-win_amd64\voe-3.5-win_amd64
+# python installer.py
+# pip install voe-0.1.0-cp39-cp39-win_amd64.whl
+# pip install onnxruntime_vitisai-1.15.1-cp39-cp39-win_amd64.whl
 ```
 
 Output:
@@ -240,15 +240,15 @@ It is recommended to build OpenCV form source code and use static build. [Git](h
 Start a `Git Bash`. In the Git Bash, clone the repository
 
 ```Git Bash
-git clone https://github.com/opencv/opencv.git -b 4.6.0
+# git clone https://github.com/opencv/opencv.git -b 4.6.0
 ```
 
 Switch back to the `Conda Prompt`, and compile the OpenCV source code with cmake.
 
 ```Conda Prompt
-cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\opencv' '-DCMAKE_PREFIX_PATH=.\opencv' -DCMAKE_BUILD_TYPE=Release -DBUILD_opencv_python2=OFF -DBUILD_opencv_python3=OFF -DBUILD_WITH_STATIC_CRT=OFF -B build -S opencv
-cmake --build build --config Release
-cmake --install build --config Release
+# cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=OFF -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\opencv' '-DCMAKE_PREFIX_PATH=.\opencv' -DCMAKE_BUILD_TYPE=Release -DBUILD_opencv_python2=OFF -DBUILD_opencv_python3=OFF -DBUILD_WITH_STATIC_CRT=OFF -B build -S opencv
+# cmake --build build --config Release
+# cmake --install build --config Release
 ```
 
 #### gflags
@@ -256,19 +256,19 @@ cmake --install build --config Release
 In the Git Bash, clone the repository
 
 ```Git Bash
-git clone https://github.com/gflags/gflags.git
+# git clone https://github.com/gflags/gflags.git
 ```
 
 Switch back to the `Conda Prompt`, and compile the gflags source code with cmake.
 
 ```Conda Prompt
-cd gflags
-mkdir mybuild
-cd mybuild
-cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\gflag'  -B build -S ../
-cmake --build build --config Release
-cmake --install build --config Release
-cd ../..
+# cd gflags
+# mkdir mybuild
+# cd mybuild
+# cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\gflag'  -B build -S ../
+# cmake --build build --config Release
+# cmake --install build --config Release
+# cd ../..
 ```
 
 #### glog
@@ -276,19 +276,19 @@ cd ../..
 In the Git Bash, clone the repository
 
 ```Git Bash
-git clone https://github.com/google/glog.git
+# git clone https://github.com/google/glog.git
 ```
 
 Switch back to the `Conda Prompt`, and compile the glog source code with cmake.
 
 ```Conda Prompt
-cd glog
-mkdir mybuild
-cd mybuild
-cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\glog'  -B build -S ../
-cmake --build build --config Release
-cmake --install build --config Release
-cd ../..
+# cd glog
+# mkdir mybuild
+# cd mybuild
+# cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DBUILD_SHARED_LIBS=ON -DCMAKE_POSITION_INDEPENDENT_CODE=ON -DCMAKE_CONFIGURATION_TYPES=Release -A x64 -T host=x64 -G "Visual Studio 16 2019" '-DCMAKE_INSTALL_PREFIX=C:\Program Files\glog'  -B build -S ../
+# cmake --build build --config Release
+# cmake --install build --config Release
+# cd ../..
 ```
 
 All the dependencies on the Ryzen AI laptop are installed completely. User could run a end to end Yolov8 deplomyment progress with the following ***Section 4***, which will start from the FP32 Yolov8 model. The whole progress will last for several hours or one day depending on the hardware computing ability. 
@@ -299,6 +299,44 @@ Alternatively, user who wants a quick benchmark could skip ***Section 4*** and s
 
 In this section, we will leverage the Vitis AI docker container on Linux GPU server for a quantized awared training(QAT).
 
+Please follow the instrucion [here](https://xilinx.github.io/Vitis-AI/3.5/html/docs/install/install.html#leverage-vitis-ai-containers)  to build your docker container or pull prebuild docker from docker hub.
+
+This tutorial will take GPU docker as a reference.
+
+### Build Vitis AI GPU Docker
+
+```Bash
+$ git clone https://github.com/Xilinx/Vitis-AI.git
+$ cd <Vitis-AI-Home>/docker
+$ ./docker_build.sh -t gpu -f pytorch
+```
+
+### Prepare Coco Dataset
+
+Download the COCO dataset from https://cocodataset.org/#download following the instruction and make sure the dataset structure is restored as below.
+Please also update variable "DATA_PATH" in "coco.yaml" to point to the correct location.
+
+```markdown
++ datasets/
+    + coco/
+        + labels/
+        + annotations/
+        + images/
+        + test-dev2017.txt 
+        + train2017.txt
+        + val2017.txt
+```
+
+```Bash
+$ cd <Vitis-AI-Home>
+$ git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git 
+$ ./docker_run.sh xilinx/vitis-ai-pytorch-gpu:<Your-Image-Tag>
+$ cd Yolov8-on-Ryzen-AI
+```
+
+### Env Setup
+
+
 ## 5 Run Yolov8 Demo
 
 ### Compilation
@@ -306,14 +344,14 @@ In this section, we will leverage the Vitis AI docker container on Linux GPU ser
 Start a `Git Bash`. In the Git Bash, clone the repository
 
 ```Git Bash
-git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git
+# git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git
 ```
 
 Switch back to the `Conda Prompt`, and compile the Yolov8 source code.
 
 ```Conda Prompt
-cd YOLOv8_RyzenAI_demo
-build.bat
+# cd YOLOv8_RyzenAI_demo
+# build.bat
 ```
 
 The output will be generated as below.
@@ -330,7 +368,7 @@ The output will be generated as below.
 To validate your setup, the following command will do the inference with single image.
 
 ```
-run_jpeg.bat DetectionModel_int.onnx sample_yolov5.jpg
+# run_jpeg.bat DetectionModel_int.onnx sample_yolov5.jpg
 ```
 
 The output will be generated as below.
@@ -361,7 +399,7 @@ camera_nx.bat
 Possible options to run the yolov8 demo.
 
 ```
-camera_nx.bat -h
+# camera_nx.bat -h
 
 Options:
       -c [parallel runs]: Specifies the (max) number of runs to invoke simultaneously. Default:1.
