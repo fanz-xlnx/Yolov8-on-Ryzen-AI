@@ -335,7 +335,7 @@ $ cd <Vitis-AI-Home>
 $ git clone https://github.com/fanz-xlnx/Yolov8-on-Ryzen-AI.git 
 $ ./docker_run.sh xilinx/vitis-ai-pytorch-gpu:<Your-Image-Tag>
 $ cd Yolov8-on-Ryzen-AI
-$ bash env_setup.sh
+$ sudo bash env_setup.sh
 ```
 
 User could use the ***run_test.sh*** script to validate the float point model first before the quantization.
@@ -347,7 +347,13 @@ $ bash run_test.sh
 Then Quantize the model with following script.
 
 ```Bash
-$ bash run_quant.sh
+$ bash run_ptq.sh
+```
+
+Then quantize the model with QAT technique.
+
+```Bash
+$ bash run_qat.sh
 ```
 
 Copy the quantized model to Ryzen AI laptop for the following deployment.
