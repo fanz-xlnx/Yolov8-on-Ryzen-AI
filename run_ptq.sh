@@ -18,7 +18,7 @@
 GPU_ID=0
 
 ROOT_DIR=${PWD}
-WEIGHTS=./float/yolov8m.pt
+WEIGHTS=./../float/yolov8m.pt
 cd code
 
 echo "[Calib mode]"

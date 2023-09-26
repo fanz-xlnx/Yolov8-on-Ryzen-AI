@@ -249,7 +249,8 @@ def entrypoint(debug=''):
             raise SyntaxError(f"'{colorstr('red', 'bold', a)}' is a valid YOLO argument but is missing an '=' sign "
                               f"to set its value, i.e. try '{a}={DEFAULT_CFG_DICT[a]}'\n{CLI_HELP_MSG}")
         else:
-            raise argument_error(a)
+            #raise argument_error(a)
+            pass
 
     # Defaults
     task2model = dict(detect='yolov8n.pt', segment='yolov8n-seg.pt', classify='yolov8n-cls.pt')

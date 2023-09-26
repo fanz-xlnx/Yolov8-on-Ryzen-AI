@@ -14,13 +14,11 @@
 
 # PART OF THIS FILE AT ALL TIMES.
 
-
 GPU_ID=0
-
-ROOT_DIR=${PWD}
-
 WEIGHTS=./../float/yolov8m.pt
+BATCH=64
+EPOCH=50
 cd code
 
-echo "[Test mode]"
-CUDA_VISIBLE_DEVICES=${GPU_ID} yolo detect val data="datasets/coco.yaml" model=${WEIGHTS}
+CUDA_VISIBLE_DEVICES=${GPU_ID} yolo detect train data="datasets/coco.yaml" model=${WEIGHTS} pretrained=True sync_bn=True \
+    epochs=${EPOCH} batch=${BATCH} optimizer="AdamW" device=${GPU_ID} lr0=0.0001 nndct_quant=True
